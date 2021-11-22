@@ -2,8 +2,6 @@ on:
   push:
     branches:
       - main
-      - development
-      - staging
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
