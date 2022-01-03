@@ -6,10 +6,29 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - uses: aws-actions/setup-sam@v1
-      - uses: aws-actions/configure-aws-credentials@v1
+      - name: checkout
+        uses: actions/checkout@v2
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        
+      - name: Audit
+        run: npm audit --audit-level critical
+    
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Lint
+        run: npm run lint
+        
+      - name: Setup AWS SAM
+        uses: aws-actions/setup-sam@v1
+        
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
