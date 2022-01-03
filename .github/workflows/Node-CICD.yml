@@ -11,9 +11,6 @@ jobs:
       
       - name: Use Node.js
         uses: actions/setup-node@v2
-
-      - name: Lint
-        run: npm run lint
         
       - name: Setup AWS SAM
         uses: aws-actions/setup-sam@v1
