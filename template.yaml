@@ -27,7 +27,10 @@ Resources:
             Method: get
       Environment:
         Variables:
-          Samuel: jamesbond.com 
+          Website: jamesbond.com 
+          Link: mylink.com
+          Name: Samuel
+
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
