@@ -26,7 +26,11 @@ Resources:
             Path: /hello
             Method: get
       Environment:
-        Variables: !file AWS-LAMBDA_ENV_VAR.txt
+        Variables:
+          Website: jamesbond.com 
+          Link: mylink.com
+          Name: Samuel
+          Surname: James
 
 
 Outputs:
