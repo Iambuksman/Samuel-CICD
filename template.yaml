@@ -31,6 +31,7 @@ Resources:
           Link: mylink.com
           Name: Samuel
           Surname: James
+          password: "#james"
 
 
 Outputs:
