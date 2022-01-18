@@ -30,7 +30,7 @@ Resources:
           Website: jamesbond.com 
           Link: mylink.com
           Name: Samuel
-          password: #james
+          password: '#james'
           Surname: James
 
 
